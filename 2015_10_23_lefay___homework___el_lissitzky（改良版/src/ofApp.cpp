@@ -2,9 +2,9 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-   
+    
     ofSetBackgroundAuto(false);
-    ofSetCircleResolution(200);
+    ofSetCircleResolution(60);
     ofCircle(circleX,circleY,circleSize);
     
     
@@ -20,17 +20,14 @@ void ofApp::setup(){
     Rect3Color.set(65,60,56);
     Rect4Color.set(142,74,69);
     Circle1Color.set(0,0,0);
-
-
+    
+    
     ofColor colorOne;
     ofColor colorTwo;
     
-
-//    ofBackground(255,0,200);
-
-
+    
     drawGradient = true;
-
+    
 }
 
 
@@ -74,26 +71,20 @@ void ofApp::draw(){
     colorTwo.set (90,131, 138);
     
     if (drawGradient) {
-         ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);
+        ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);
         drawGradient = false;
     }
-//    ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);
-    // Sets the background to a circular gradient
-    
-
     
     
-    //a moving circle
+    
+    //-----------------------------------------------------a moving circle／no fill
     ofSetColor(180,182,214);
     ofCircle(circleX+100,circleY+100,circleSize/2);
-    
+    //------------------------------------------------------four square
     ofFill();
     ofSetColor(Rect1Color);
     ofRect(0, 0,rectWidth, rectHeight);
     
-    ofSetColor(222,195,132,200);
-    ofCircle(180,180,60);
-   
     ofSetColor(Rect2Color);
     ofRect(ofGetWidth()-300, 0, 300, rectHeight);
     
@@ -103,16 +94,18 @@ void ofApp::draw(){
     ofSetColor(Rect4Color);
     ofRect(0, ofGetHeight()-200, 300, rectHeight);
     
-    //background  black line
+    //----------------------------------------------------background  black line
     ofSetColor(40,40,43);
     ofRect(200, 280, 1500, 35);
     
-    
+    //-------------------------------------no move circle/2
+    ofSetColor(222,195,132,200);
+    ofCircle(180,180,60);
     ofSetColor(80,180,200);
     ofCircle(200,200,22);
     
-    // 2 circle
-    ofSetColor(250,250,255,240);
+    // -------------------------------------------big center white circle
+    ofSetColor(250,240,255,240);
     ofCircle(650,400,rectCircle);
     
     
@@ -121,13 +114,12 @@ void ofApp::draw(){
     ofCircle(circleX,circleY,circleSize);
     
     
-    
-    
+    //-----------------------------------change color circle/ dark black
     ofSetColor(Circle1Color);
     ofCircle(550,500,80);
     
     
-    //bar2
+    //--------------------------------------------------bar2
     ofFill();
     ofSetColor(204,105,90,235);
     ofPoint a;
@@ -137,7 +129,7 @@ void ofApp::draw(){
     ofRect(a, 34, mouseY);
     
     
-    //bar 1
+    //------------------------------------------------bar 1
     ofFill();
     ofSetColor(219,217,186);
     ofPoint q;      // create a point q
@@ -146,24 +138,23 @@ void ofApp::draw(){
     
     ofRect(q, mouseX, 25); // Draw the rectangle
     
-    //bar3
+    //-------------------------------------------------bar3
     ofFill();
     ofSetColor(90,95,100);
-    ofPoint p;      // create a point P
-    p.x = mouseX;       // set the x of the point
-    p.y = 425;       // set the y of the point
+    ofPoint p;
+    p.x = mouseX;
+    p.y = 425;
+    ofRect(p, mouseX, 40);
     
-    ofRect(p, mouseX, 40); // Draw the rectangle
-    
-    
-    ofSetColor(70,57,70,190);
+    //-------------------------------------------------draw my shape 2 square
+    ofSetColor(0,10,0,20);
     ofFill();
-    drawMyShape(mouseX,mouseY,70,70);//gaibian houmian fangkuang daxiao
+    drawMyShape(mouseX,mouseY,80,80);//square 1
     
-    ofSetLineWidth(4);
-    ofSetColor(206,206,205);
-    ofFill();
-    drawMyShape(mouseX,mouseY,50,50);
+    ofSetLineWidth(2);
+    ofSetColor(222,195,90);
+    ofNoFill();
+    drawMyShape(mouseX,mouseY,50,50);//square 2
     
     
     
@@ -174,11 +165,11 @@ void ofApp::draw(){
 
 void ofApp::drawMyShape(int x,int y,int width,int height){
     ofBeginShape();
-    ofVertex(x+0,y+0);
-    ofVertex(x+width,y+0);
+    ofVertex(x,y);
+    ofVertex(x+width,y);
     ofVertex(x+width, y+height);
-    ofVertex(x+0, y+height);
-    ofVertex(x+0, y+0);
+    ofVertex(x, y+height);
+    ofVertex(x, y);
     ofEndShape();
     
     
@@ -208,18 +199,16 @@ void ofApp::keyPressed(int key){
     if(key=='6'){
         rectCircle=rectCircle +10;
     }
-
-
     
     if (key == 'g') {
         drawGradient = true;
     }
 }
-        
-        
+
+
 //--------------------------------------------------------------
 
-    void ofApp::keyReleased(int key){
+void ofApp::keyReleased(int key){
     
 }
 
@@ -229,13 +218,13 @@ void ofApp::mouseMoved(int x, int y ){
         xSpeed=3;
     }
     else{
-        xSpeed=-2;
+        xSpeed=-3;
     }
     if(y>ofGetHeight()/2 ){
         ySpeed=3;
     }
     else{
-        ySpeed=-2;
+        ySpeed=-3;
     }
     
     
@@ -271,6 +260,6 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
     
 }

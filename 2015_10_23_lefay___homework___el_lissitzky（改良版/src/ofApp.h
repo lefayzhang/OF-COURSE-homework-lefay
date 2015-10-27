@@ -9,9 +9,7 @@ public:
     void update();
     void draw();
     
-    void drawMyShape();
-    void drawMyShape(int x,int y);
-    void drawMyShape(int x,int y,int width,int height);
+    void drawMyShape(int x,int y, int width,int height);
     
     void keyPressed(int key);
     void keyReleased(int key);
@@ -40,7 +38,8 @@ public:
     int rectCircle;
     
     bool drawGradient;
-
+    
     
     
 };
+

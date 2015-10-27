@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>61E952B3-473E-4DDB-9E04-DD1123D37EA2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>2015_10_23_lefay___homework___el_lissitzky</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8DADC4A5CCD6A1F735C16FE0F14D3B20318B273A</key>
+		<string>https://github.com/lefayzhang/OF-COURSE-homework-lefay.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>2015_10_23_lefay___homework___el_lissitzky（改良版/2015_10_23_lefay___homework___el_lissitzky.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8DADC4A5CCD6A1F735C16FE0F14D3B20318B273A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lefayzhang/OF-COURSE-homework-lefay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8DADC4A5CCD6A1F735C16FE0F14D3B20318B273A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8DADC4A5CCD6A1F735C16FE0F14D3B20318B273A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OF-COURSE-homework-lefay</string>
+		</dict>
+	</array>
+</dict>
+</plist>
